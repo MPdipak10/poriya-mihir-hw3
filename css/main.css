@@ -1,0 +1,106 @@
+/* Apply background image */
+body {
+    background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: #34495e;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for header */
+#todo-header {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Style for section headers */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* Style for unordered lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Style for list items */
+li {
+    padding: 10px;
+    border-bottom: 1px solid #bdc3c7;
+    display: flex;
+    align-items: center;
+}
+
+/* Remove bottom border from the last list item */
+li:last-child {
+    border-bottom: none;
+}
+
+/* In Progress List Style */
+.in-progress {
+    color: #f39c12; /* Yellow color for in-progress tasks */
+}
+
+/* Done List Style */
+.done {
+    color: #7f8c8d; /* Grey color for completed tasks */
+    text-decoration: line-through;
+}
+
+/* Style for task checkboxes */
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Slightly larger checkboxes */
+}
+
+/* When an item is checked in the In Progress list */
+#in-progress input:checked + label {
+    color: #2ecc71; /* Green color when in progress is checked */
+}
+
+/* When an item is checked in the Done list */
+#done input:checked + label {
+    color: #95a5a6; /* Lighter grey color for done tasks */
+    text-decoration: line-through; /* Strike-through for completed tasks */
+}
+
+/* ::after for Done items - add a checkmark */
+.done::after {
+    content: "✔️";
+    margin-left: 10px;
+    color: #2ecc71; /* Green checkmark */
+    font-size: 1.5rem;
+}
+
+/* ::after for In Progress items - add a clock icon */
+.in-progress::after {
+    content: "⏳";
+    margin-left: 10px;
+    color: #f39c12; /* Yellow clock icon */
+    font-size: 1.5rem;
+}
+
+/* Style for the In Progress and Done Sections */
+#in-progress, #done {
+    margin-bottom: 30px;
+}
+
+/* Style for the labels */
+label {
+    cursor: pointer; /* Makes the label clickable */
+    font-size: 1.2rem;
+}
